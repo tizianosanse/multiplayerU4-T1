@@ -37,7 +37,7 @@ public class Mp4 extends MultimedialElements implements Reproduction {
     }
     public String esclVol (int volume) {
         String esc = "!";
-        for (int i = 0; i <this.getVolume() ; i++) {
+        for (int i = 0; i <this.getVolume() -1 ; i++) {
             esc+=esc;
         }
         return esc;
@@ -56,10 +56,10 @@ public class Mp4 extends MultimedialElements implements Reproduction {
     }
     public String astlLight (int light) {
         String esc = "*";
-        for (int i = 0; i <this.getVolume() ; i++) {
-            esc+=esc;
+        for (int i = 0; i <this.getLight() -1; i++) {
+           return esc+=esc;
         }
-        return esc;
+      return esc;
 
     }
     @Override
@@ -78,7 +78,7 @@ public class Mp4 extends MultimedialElements implements Reproduction {
                 System.out.println(this.getTitle() + this.esclVol(this.volume)+ this.astlLight(this.light));
 
             }
-            System.out.println();
+
 
             System.out.println("Do you want Turn up or Turn dawn the volume or the Light? yes/no");
 

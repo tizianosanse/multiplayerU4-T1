@@ -31,7 +31,7 @@ public class Mp3 extends MultimedialElements implements Reproduction {
     }
     public String esclVol (int volume) {
         String esc = "!";
-        for (int i = 0; i <this.getVolume() ; i++) {
+        for (int i = 0; i <this.getVolume() -1 ; i++) {
             esc+=esc;
         }
         return esc;
@@ -76,6 +76,7 @@ public class Mp3 extends MultimedialElements implements Reproduction {
                            "write an integer to lower the volume from the initial volume minus that value"+" ="+" "+this.getVolume());
                    int value = sc.nextInt();
                    this.turnDownVolume(value);
+                    System.out.println("the volume is: "+ this.getVolume());
                     sc.close();
                 }
 
