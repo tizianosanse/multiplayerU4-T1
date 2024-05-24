@@ -33,7 +33,7 @@ public class Mp3 extends MultimedialElements implements Reproduction {
         String esc = "!";
         for (int i = 0; i <this.getVolume() ; i++) {
             esc+=esc;
-        } System.out.println(esc);
+        }
         return esc;
 
     }
@@ -56,21 +56,36 @@ public class Mp3 extends MultimedialElements implements Reproduction {
             }
             System.out.println();
 
-            System.out.println("Do you want Turn up the volume? yes/no");
+            System.out.println("Do you want Turn up or Tur dawn the volume? yes/no");
+
+         ;
             String yesOrNo = sc.nextLine();
             if (yesOrNo.equals("yes")) {
-                System.out.println(
-                        "write an integer to raise the volume from the initial volume plus that value ="+" "+this.getVolume());
-                int value = sc.nextInt();
-                this.turnUpVolume(value);
-                System.out.println("the volume is: "+ this.getVolume());
-                System.out.println();
-                return true;
+                System.out.println("do you want Turn up the volume or you want Turn dawn the volume? turn-up/turn-dawn");
+               String TurnUpOrDawn = sc.nextLine();
+               if (TurnUpOrDawn.equals("turn-up")) {
+                   System.out.println(
+                           "write an integer to raise the volume from the initial volume plus that value ="+" "+this.getVolume());
+                   int value = sc.nextInt();
+                   this.turnUpVolume(value);
+                   System.out.println("the volume is: "+ this.getVolume());
+                   System.out.println();
+
+               } if (TurnUpOrDawn.equals("turn-dawn")) {
+                   System.out.println(
+                           "write an integer to lower the volume from the initial volume minus that value"+" ="+" "+this.getVolume());
+                   int value = sc.nextInt();
+                   this.turnDownVolume(value);
+                    sc.close();
+                }
+
             }
 
             return true;
         }else{
             System.out.println("la parola non e stata riconosciuta con successo");
+            Scanner sc1 = new Scanner(System.in);
+
             return false;
         }
 
