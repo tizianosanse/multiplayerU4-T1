@@ -8,4 +8,7 @@ public abstract class MultimedialElements {
 
     }
 
+    public String getTitle() {
+        return title;
+    }
 }

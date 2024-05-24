@@ -3,25 +3,28 @@ package entities;
 import Interfaces.Reproduction;
 
 public class Mp4 extends MultimedialElements implements Reproduction {
-   protected int durata;
+   protected int duration;
+
 
     @Override
     public boolean play() {
-        return true;
+        return false;
     }
 
-    public Mp4(String title,int durata){
+
+    public Mp4(String title,int duration){
         super(title);
-        this.durata = durata;
+        this.duration = duration;
 
 
     }
 
-    public int getDurata() {
-        return durata;
+
+    public int getDuration() {
+        return duration;
     }
 
-    public void setDurata(int durata) {
-        this.durata = durata;
+    public int setDuration(int duration) {
+        return this.duration = duration;
     }
 }
