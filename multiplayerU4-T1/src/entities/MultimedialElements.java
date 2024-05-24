@@ -1,6 +1,6 @@
 package entities;
 
-public abstract class MultimedialElements {
+public  class MultimedialElements {
     private String title;
 
     public MultimedialElements(String title) {

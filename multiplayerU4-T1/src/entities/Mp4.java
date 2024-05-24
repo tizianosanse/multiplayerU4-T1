@@ -72,7 +72,7 @@ public class Mp4 extends MultimedialElements implements Reproduction {
 
             return false;
         }if (play.equals("play")){
-            System.out.println("The song is playing");
+            System.out.println("The video is playing");
             for (int i = 0; i < this.getDuration(); i++) {
 
                 System.out.println(this.getTitle() + this.esclVol(this.volume)+ this.astlLight(this.light));
